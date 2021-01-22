@@ -47,7 +47,7 @@ class Front {
 		wp_register_script(
 			'wp-api-plugin-shortcode-script',
 			WPAPI_PLUGIN_URL . 'assets/dist/script.min.js',
-			[],
+			[ 'wp-i18n' ],
 			Plugin::VERSION
 		);
 
