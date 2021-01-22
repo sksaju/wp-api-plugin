@@ -25,7 +25,7 @@ class Admin {
 	}
 
 	/**
-	 * Register styles for the admin panel.
+	 * Enqueue styles for admin panel.
 	 *
 	 * @since 1.0.0
 	 *
@@ -46,7 +46,7 @@ class Admin {
 	}
 
 	/**
-	 * Register JavaScript's for the admin panel.
+	 * Enqueue script for admin panel.
 	 *
 	 * @since 1.0.0
 	 *

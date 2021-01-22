@@ -15,3 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<div class="wpapi-table-container">
+	<h3></h3>
+	<table class="wpapi-table"></table>
+</div>

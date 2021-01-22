@@ -22,6 +22,6 @@
         }
     },
     "scripts": {
-		"cs": "phpcs --standard=.phpcs.xml ."
+		"phpcs": "phpcs --standard=.phpcs.xml ."
 	}
 }

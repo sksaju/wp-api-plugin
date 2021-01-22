@@ -2,11 +2,13 @@
 	"name": "wp-api-plugin",
 	"version": "1.0.0",
 	"description": "WP Simple API Plugin",
-	"main": "assets/src/js/main.js",
+	"main": "assets/src/js/script.js",
 	"scripts": {
 		"eslint": "eslint assets/src/js/**/*.js",
 		"build": "webpack --mode=production",
-		"watch": "webpack --mode=development --watch"
+		"watch": "webpack --mode=development --watch",
+		"makepot": "wp i18n make-pot --exclude='dist,node_modules,vendors' . languages/wp-api-plugin.pot",
+		"pot2json": "po2json languages/wp-api-plugin.pot languages/wp-api-plugin.json --format jed --pretty"
 	},
 	"repository": {
 		"type": "git",
@@ -23,11 +25,14 @@
 		"@babel/preset-env": "^7.12.11",
 		"babel-loader": "^8.2.2",
 		"clean-webpack-plugin": "^3.0.0",
+		"css-loader": "^5.0.1",
+		"css-minimizer-webpack-plugin": "^1.2.0",
 		"eslint": "^7.18.0",
 		"eslint-config-wordpress": "^2.0.0",
 		"eslint-loader": "^4.0.2",
 		"mini-css-extract-plugin": "^1.3.4",
 		"node-sass": "^5.0.0",
+		"po2json": "^0.4.5",
 		"sass-loader": "^10.1.1",
 		"uglify-js": "^3.12.5",
 		"webpack": "^5.16.0",

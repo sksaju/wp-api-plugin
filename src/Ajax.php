@@ -17,8 +17,8 @@ class Ajax {
 	 * Plugin constructor.
 	 */
 	public function __construct() {
-		add_action( 'wp_ajax_get_api_data', [ $this, 'get_api_data' ] );
-		add_action( 'wp_ajax_nopriv_get_api_data', [ $this, 'get_api_data' ] );
+		add_action( 'wp_ajax_wpapi_plugin_get_data', [ $this, 'get_api_data' ] );
+		add_action( 'wp_ajax_nopriv_wpapi_plugin_get_data', [ $this, 'get_api_data' ] );
 	}
 
 	/**

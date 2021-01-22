@@ -1,0 +1,39 @@
+.wpapi-table-container {
+    max-width: 960px !important;
+    h3 {
+        text-align: center;
+    }
+}
+
+.wpapi-table {
+	border-collapse: collapse;
+	width: 100%;
+	td {
+		border: 1px solid #ddd;
+		padding: 10px;
+	}
+	th {
+		border: 1px solid #fff;
+		padding: 15px 10px;
+		text-align: left;
+		background-color: #333;
+		color: #fff;
+	}
+	tr {
+		&:nth-child(even) {
+			background-color: #f6f6f6;
+		}
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+}
+
+.wpapi-loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #555;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}

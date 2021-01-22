@@ -7,18 +7,18 @@ const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const JS_DIR = path.resolve( __dirname, 'assets/src/js' );
 const BUILD_DIR = path.resolve( __dirname, 'assets/dist' );
 
-module.exports = function ( env, options ) {
+module.exports = ( env, options ) => {
 
 	const mode = options.mode || 'development';
 
-	const extPrefix = mode === 'production' ? '.min' : '';
+	const extPrefix = ( mode === 'production' ) ? '.min' : '';
 
 	const config = {
 		mode,
-		entry: [
-			'./assets/src/js/main.js',
-			'./assets/src/scss/main.scss'
-		],
+		entry: {
+			script: './assets/src/js/script.js',
+			styles: './assets/src/css/styles.scss'
+		},
 		output: {
 			path: path.resolve( __dirname, BUILD_DIR ),
 			filename: `[name]${extPrefix}.js`,
@@ -63,6 +63,10 @@ module.exports = function ( env, options ) {
 				} ),
 				new CssMinimizerPlugin()
 			],
+		},
+		externals: {
+			'@wordpress/api-fetch': ['wp', 'apiFetch'],
+			'@wordpress/i18n': ['wp', 'i18n'],
 		},
 		devtool: 'source-map',
 	}
