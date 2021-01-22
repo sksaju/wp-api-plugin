@@ -1,0 +1,50 @@
+# Copyright (C) 2021 Shazahan Kabir
+# This file is distributed under the same license as the WP API Plugin plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP API Plugin 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-api-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-01-22T21:26:36+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: wp-api-plugin\n"
+
+#. Plugin Name of the plugin
+#: src/Admin/Admin.php:77
+msgid "WP API Plugin"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/sksaju/wp-api-plugin"
+msgstr ""
+
+#. Description of the plugin
+msgid "A Simple API Plugin for WordPress"
+msgstr ""
+
+#. Author of the plugin
+msgid "Shazahan Kabir"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/sksaju/"
+msgstr ""
+
+#: src/Admin/Admin.php:76
+msgid "WP API Plugin Data"
+msgstr ""
+
+#. translators: %1$s: start <strong> tag, %2$s: end </strong> tag
+#: wp-api-plugin.php:37
+msgid "The %1$sWP API Plugin%2$s requires at least %1$sPHP 7.1 %2$s to run properly. Please update the PHP on your server and try again."
+msgstr ""
+
+#: assets/src/js/script.js:21
+#: assets/dist/script.js:21
+msgid "loading..."
+msgstr ""
