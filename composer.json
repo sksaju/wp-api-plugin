@@ -1,0 +1,27 @@
+{
+    "name": "sksaju/wp-api-plugin",
+    "description": "WP Simple API Plugin",
+    "license": "GPL-2.0+",
+    "type": "project",
+    "authors": [
+        {
+            "name": "sksaju",
+            "email": "sksaaju@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "wp-coding-standards/wpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "WPAPIPlugin\\": "src/"
+        }
+    },
+    "scripts": {
+		"cs": "phpcs --standard=.phpcs.xml ."
+	}
+}
