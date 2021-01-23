@@ -21,7 +21,6 @@ class Ajax {
 		add_action( 'wp_ajax_nopriv_wpapi_plugin_get_data', [ $this, 'get_api_data' ] );
 
 		add_action( 'wp_ajax_wpapi_plugin_refresh_data', [ $this, 'refresh_api_data' ] );
-		add_action( 'wp_ajax_nopriv_wpapi_plugin_refresh_data', [ $this, 'refresh_api_data' ] );
 	}
 
 	/**
@@ -45,6 +44,9 @@ class Ajax {
 	 * @since 1.0.0
 	 */
 	public function refresh_api_data(): void {
+
+		Helpers::checking_nonce(); // check nonce value.
+
 		$api_data = Helpers::set_api_data();
 
 		if ( $api_data ) {

@@ -35,6 +35,8 @@ class Admin {
 			return;
 		}
 
+		$nonce_key = Plugin::NONCE_KEY;
+
 		wp_enqueue_script(
 			'wp-api-plugin-admin-script',
 			WPAPI_PLUGIN_URL . 'assets/dist/admin/main.min.js',
@@ -48,7 +50,9 @@ class Admin {
 			'wp-api-plugin-admin-script',
 			'wpapiplugin',
 			[
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'ajax_url'  => admin_url( 'admin-ajax.php' ),
+				'nonce_key' => $nonce_key,
+				$nonce_key  => wp_create_nonce( Plugin::NONCE_ACTION ),
 			]
 		);
 	}

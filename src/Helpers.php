@@ -70,4 +70,19 @@ class Helpers {
 
 		return $data;
 	}
+
+	/**
+	 * Check nonce value
+	 *
+	 * @param string $method request method.
+	 *
+	 * @since v.1.0.0
+	 */
+	public static function checking_nonce( $method = 'POST' ) {
+		$data      = ( 'POST' === $method ) ? $_POST : $_GET;
+		$nonce_key = Plugin::NONCE_KEY;
+		$matched   = ! empty( $data[ $nonce_key ] ) && wp_verify_nonce( $data[ $nonce_key ], Plugin::NONCE_ACTION );
+
+		! $matched ? exit( __( 'Nonce not matched', 'wp-api-plugin' ) ) : 0;
+	}
 }

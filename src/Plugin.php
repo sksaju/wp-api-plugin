@@ -31,6 +31,20 @@ class Plugin {
 	const VERSION = '1.0.0';
 
 	/**
+	 * Plugin nonce key
+	 *
+	 * @since 1.0.0
+	 */
+	const NONCE_KEY = '_wpnonce';
+
+	/**
+	 * Plugin nonce action
+	 *
+	 * @since 1.0.0
+	 */
+	const NONCE_ACTION = 'wpapi_nonce_action';
+
+	/**
 	 * Plugin constructor.
 	 */
 	public function __construct() {
