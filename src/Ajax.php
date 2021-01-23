@@ -1,4 +1,7 @@
 <?php
+
+namespace WPAPIPlugin;
+
 /**
  * Class Ajax
  *
@@ -8,9 +11,6 @@
  * @link     https://github.com/sksaju/wp-api-plugin
  * @since    v1.0.0
  */
-
-namespace WPAPIPlugin;
-
 class Ajax {
 
 	/**

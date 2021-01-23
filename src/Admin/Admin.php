@@ -1,4 +1,9 @@
 <?php
+
+namespace WPAPIPlugin\Admin;
+
+use WPAPIPlugin\Plugin;
+
 /**
  * Class Admin
  *
@@ -8,11 +13,6 @@
  * @link     https://github.com/sksaju/wp-api-plugin
  * @since    v1.0.0
  */
-
-namespace WPAPIPlugin\Admin;
-
-use WPAPIPlugin\Plugin;
-
 class Admin {
 
 	/**

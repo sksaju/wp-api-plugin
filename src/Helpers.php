@@ -1,4 +1,9 @@
 <?php
+
+namespace WPAPIPlugin;
+
+use Exception;
+
 /**
  * Class with static helper functions.
  *
@@ -8,11 +13,6 @@
  * @link     https://github.com/sksaju/wp-api-plugin
  * @since    v1.0.0
  */
-
-namespace WPAPIPlugin;
-
-use Exception;
-
 class Helpers {
 
 	/**
@@ -83,6 +83,6 @@ class Helpers {
 		$nonce_key = Plugin::NONCE_KEY;
 		$matched   = ! empty( $data[ $nonce_key ] ) && wp_verify_nonce( $data[ $nonce_key ], Plugin::NONCE_ACTION );
 
-		! $matched ? exit( __( 'Nonce not matched', 'wp-api-plugin' ) ) : 0;
+		! $matched ? exit( esc_html__( 'Nonce not matched', 'wp-api-plugin' ) ) : 0;
 	}
 }

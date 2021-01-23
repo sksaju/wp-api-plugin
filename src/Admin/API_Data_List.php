@@ -1,4 +1,10 @@
 <?php
+
+namespace WPAPIPlugin\Admin;
+
+use WP_List_Table;
+use WPAPIPlugin\Helpers;
+
 /**
  * Class Admin
  *
@@ -8,12 +14,6 @@
  * @link     https://github.com/sksaju/wp-api-plugin
  * @since    v1.0.0
  */
-
-namespace WPAPIPlugin\Admin;
-
-use WP_List_Table;
-use WPAPIPlugin\Helpers;
-
 class API_Data_List extends WP_List_Table {
 
 	/**

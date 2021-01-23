@@ -1,4 +1,11 @@
 <?php
+
+namespace WPAPIPlugin;
+
+use WPAPIPlugin\Admin\Admin;
+use WPAPIPlugin\Front\Front;
+use WPAPIPlugin\WP_CLI\CLI_Command;
+
 /**
  * Class Plugin
  *
@@ -8,12 +15,6 @@
  * @link     https://github.com/sksaju/wp-api-plugin
  * @since    v1.0.0
  */
-
-namespace WPAPIPlugin;
-
-use WPAPIPlugin\Admin\Admin;
-use WPAPIPlugin\Front\Front;
-
 class Plugin {
 
 	/**
@@ -66,6 +67,10 @@ class Plugin {
 	 * @since 1.0.0
 	 */
 	public function run(): void {
+
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			CLI_Command::init();
+		}
 
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			new Ajax();
