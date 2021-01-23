@@ -15,14 +15,6 @@ module.exports = ( env, options ) => {
 
 	const config = {
 		mode,
-		entry: {
-			script: './assets/src/js/script.js',
-			styles: './assets/src/css/styles.scss'
-		},
-		output: {
-			path: path.resolve( __dirname, BUILD_DIR ),
-			filename: `[name]${extPrefix}.js`,
-		},
 		module: {
 			rules: [
 				{
@@ -71,5 +63,28 @@ module.exports = ( env, options ) => {
 		devtool: 'source-map',
 	}
 
-	return config;
+	var configPublic = Object.assign({}, config, {
+		name: "configPublic",
+		entry: [
+			'./assets/src/front/js/main.js',
+			'./assets/src/front/css/main.scss'
+		],
+		output: {
+			path: path.resolve( __dirname, `${BUILD_DIR}/front` ),
+			filename: `[name]${extPrefix}.js`,
+		},
+	});
+
+	var configAdmin = Object.assign({}, config, {
+		name: "configAdmin",
+		entry: [
+			'./assets/src/admin/js/main.js'
+		],
+		output: {
+			path: path.resolve( __dirname, `${BUILD_DIR}/admin` ),
+			filename: `[name]${extPrefix}.js`,
+		},
+	});
+
+	return [ configPublic, configAdmin ];
 }

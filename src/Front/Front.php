@@ -32,7 +32,7 @@ class Front {
 	public function register_styles(): void {
 		wp_register_style(
 			'wp-api-plugin-shortcode-styles',
-			WPAPI_PLUGIN_URL . 'assets/dist/styles.min.css',
+			WPAPI_PLUGIN_URL . 'assets/dist/front/main.min.css',
 			[],
 			Plugin::VERSION
 		);
@@ -46,15 +46,19 @@ class Front {
 	public function register_scripts(): void {
 		wp_register_script(
 			'wp-api-plugin-shortcode-script',
-			WPAPI_PLUGIN_URL . 'assets/dist/script.min.js',
+			WPAPI_PLUGIN_URL . 'assets/dist/front/main.min.js',
 			[ 'wp-i18n' ],
 			Plugin::VERSION
 		);
 
-		// Localize the script with data
-		wp_localize_script( 'wp-api-plugin-shortcode-script', 'wpapiplugin', [
-			'ajax_url' => admin_url( 'admin-ajax.php' ),
-		] );
+		// Localize the script with data.
+		wp_localize_script(
+			'wp-api-plugin-shortcode-script',
+			'wpapiplugin',
+			[
+				'ajax_url' => admin_url( 'admin-ajax.php' ),
+			]
+		);
 	}
 
 	/**

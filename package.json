@@ -4,7 +4,7 @@
 	"description": "WP Simple API Plugin",
 	"main": "assets/src/js/script.js",
 	"scripts": {
-		"eslint": "eslint assets/src/js/**/*.js",
+		"eslint": "eslint assets/src/**/**/*.js",
 		"build": "webpack --mode=production",
 		"watch": "webpack --mode=development --watch",
 		"makepot": "wp i18n make-pot --exclude='dist,node_modules,vendors' . languages/wp-api-plugin.pot",
@@ -36,7 +36,6 @@
 		"sass-loader": "^10.1.1",
 		"uglify-js": "^3.12.5",
 		"webpack": "^5.16.0",
-		"webpack-cli": "^4.4.0",
-		"wp-pot": "^1.9.8"
+		"webpack-cli": "^4.4.0"
 	}
 }
