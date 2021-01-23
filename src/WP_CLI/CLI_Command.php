@@ -1,11 +1,4 @@
 <?php
-
-namespace WPAPIPlugin\WP_CLI;
-
-use WP_CLI;
-use WP_CLI_Command;
-use WPAPIPlugin\Helpers;
-
 /**
  * Class CLI Commands
  *
@@ -14,6 +7,20 @@ use WPAPIPlugin\Helpers;
  * @license  GPLv2 or later
  * @link     https://github.com/sksaju/wp-api-plugin
  * @since    v1.0.0
+ */
+
+namespace WPAPIPlugin\WP_CLI;
+
+use WP_CLI;
+use WP_CLI_Command;
+use WPAPIPlugin\Helpers;
+
+/**
+ * Class Ajax
+ *
+ * @package WPAPIPlugin\WP_CLI
+ *
+ * @since   1.0.0
  */
 class CLI_Command extends WP_CLI_Command {
 

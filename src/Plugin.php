@@ -1,4 +1,13 @@
 <?php
+/**
+ * Plugin main class
+ *
+ * @package  WPAPIPlugin
+ * @author   Shazahan Kabir <sksaaju@gmail.com>
+ * @license  GPLv2 or later
+ * @link     https://github.com/sksaju/wp-api-plugin
+ * @since    1.0.0
+ */
 
 namespace WPAPIPlugin;
 
@@ -9,11 +18,9 @@ use WPAPIPlugin\WP_CLI\CLI_Command;
 /**
  * Class Plugin
  *
- * @package  WPAPIPlugin
- * @author   Shazahan Kabir <sksaaju@gmail.com>
- * @license  GPLv2 or later
- * @link     https://github.com/sksaju/wp-api-plugin
- * @since    v1.0.0
+ * @package WPAPIPlugin
+ *
+ * @since   1.0.0
  */
 class Plugin {
 

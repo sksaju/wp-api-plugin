@@ -12,19 +12,23 @@
 		border: 1px solid #ddd;
 		padding: 10px;
 	}
-	thead th {
-		border: 1px solid #fff;
-		padding: 15px 10px;
-		text-align: left;
-		background-color: #333;
-		color: #fff;
-	}
-	tbody tr {
-		&:nth-child(even) {
-			background-color: #f6f6f6;
+	thead {
+		tr {
+			border: 1px solid #fff;
+			padding: 15px 10px;
+			text-align: left;
+			background-color: #333;
+			color: #fff;
 		}
-		&:hover {
-			background-color: #f1f1f1;
+	}
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: #f6f6f6;
+			}
+			&:hover {
+				background-color: #f1f1f1;
+			}
 		}
 	}
 }

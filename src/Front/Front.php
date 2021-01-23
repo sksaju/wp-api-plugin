@@ -1,9 +1,4 @@
 <?php
-
-namespace WPAPIPlugin\Front;
-
-use WPAPIPlugin\Plugin;
-
 /**
  * Class Front
  *
@@ -11,7 +6,19 @@ use WPAPIPlugin\Plugin;
  * @author   Shazahan Kabir <sksaaju@gmail.com>
  * @license  GPLv2 or later
  * @link     https://github.com/sksaju/wp-api-plugin
- * @since    v1.0.0
+ * @since    1.0.0
+ */
+
+namespace WPAPIPlugin\Front;
+
+use WPAPIPlugin\Plugin;
+
+ /**
+ * Class Front
+ *
+ * @package WPAPIPlugin\Front
+ *
+ * @since   1.0.0
  */
 class Front {
 

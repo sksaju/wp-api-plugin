@@ -1,9 +1,4 @@
 <?php
-
-namespace WPAPIPlugin\Admin;
-
-use WPAPIPlugin\Plugin;
-
 /**
  * Class Admin
  *
@@ -11,7 +6,19 @@ use WPAPIPlugin\Plugin;
  * @author   Shazahan Kabir <sksaaju@gmail.com>
  * @license  GPLv2 or later
  * @link     https://github.com/sksaju/wp-api-plugin
- * @since    v1.0.0
+ * @since    1.0.0
+ */
+
+namespace WPAPIPlugin\Admin;
+
+use WPAPIPlugin\Plugin;
+
+ /**
+ * Class Admin
+ *
+ * @package WPAPIPlugin\Admin
+ *
+ * @since   1.0.0
  */
 class Admin {
 
