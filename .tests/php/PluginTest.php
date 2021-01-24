@@ -23,16 +23,16 @@ use WPAPIPlugin\Helpers;
  */
 class PluginTest extends TestCase {
 
-    /**
+	/**
 	 * Test api data
 	 *
 	 * @since 1.0.0
 	 */
-    public function test_api_data() {
-        $api_data = Helpers::get_api_data();
-        $this->assertIsArray( $api_data );
-        $this->assertNotCount( 0, $api_data );
-        $this->assertArrayHasKey( 'title', $api_data );
-        $this->assertArrayHasKey( 'data', $api_data );
-    }
+	public function test_api_data() {
+		$api_data = Helpers::get_api_data();
+		$this->assertIsArray( $api_data );
+		$this->assertNotCount( 0, $api_data );
+		$this->assertArrayHasKey( 'title', $api_data );
+		$this->assertArrayHasKey( 'data', $api_data );
+	}
 }

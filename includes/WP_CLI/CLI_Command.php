@@ -31,11 +31,11 @@ class CLI_Command extends WP_CLI_Command {
 	 */
 	public static function init(): void {
 		WP_CLI::add_command( 'refresh-api-data', [ __CLASS__, 'refresh_api_data' ] );
-    }
-    
-    /**
+	}
+
+	/**
 	 * Run the refresh command callback
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public static function refresh_api_data() {
@@ -56,5 +56,5 @@ class CLI_Command extends WP_CLI_Command {
 				)
 			);
 		}
-    }
+	}
 }

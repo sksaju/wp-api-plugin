@@ -14,7 +14,7 @@ namespace WPAPIPlugin\Admin;
 use WP_List_Table;
 use WPAPIPlugin\Helpers;
 
- /**
+/**
  * Class Admin
  *
  * @package WPAPIPlugin\Admin
@@ -30,9 +30,9 @@ class API_Data_List extends WP_List_Table {
 		// Set parent defaults.
 		parent::__construct(
 			[
-				'singular' => 'API Data', 	// singular name of the listed records.
-				'plural'   => 'API Data', 	// plural name of the listed records.
-				'ajax'     => false, 		// does this table support ajax?
+				'singular' => 'API Data',     // singular name of the listed records.
+				'plural'   => 'API Data',    // plural name of the listed records.
+				'ajax'     => false,        // does this table support ajax?
 			]
 		);
 	}
@@ -40,7 +40,7 @@ class API_Data_List extends WP_List_Table {
 	/**
 	 * Render a column when no column specific method exists.
 	 *
-	 * @param  array $item row values.
+	 * @param  array  $item row values.
 	 * @param  string $column_name col name.
 	 *
 	 * @return mixed

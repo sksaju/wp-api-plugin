@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="wrap">
 	<h1 class="wp-heading-inline">
 		<?php echo esc_html( get_admin_page_title() ); ?>
-		<button type="button" id="wpapi-plugin-btn-refresh" class="button"><?php _e( 'Refresh', 'wp-api-plugin' ); ?></button>
+		<button type="button" id="wpapi-plugin-btn-refresh" class="button"><?php esc_html_e( 'Refresh', 'wp-api-plugin' ); ?></button>
 	</h1>
 	<?php
 		$api_data = new API_Data_List();

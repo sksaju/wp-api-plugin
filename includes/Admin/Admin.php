@@ -13,7 +13,7 @@ namespace WPAPIPlugin\Admin;
 
 use WPAPIPlugin\Plugin;
 
- /**
+/**
  * Class Admin
  *
  * @package WPAPIPlugin\Admin
@@ -57,9 +57,9 @@ class Admin {
 			'wp-api-plugin-admin-script',
 			'wpapiplugin',
 			[
-				'ajax_url'  => admin_url( 'admin-ajax.php' ),
-				'nonce_key' => $nonce_key,
-				$nonce_key  => wp_create_nonce( Plugin::NONCE_ACTION ),
+				'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
+				'nonceKey' => $nonce_key,
+				$nonce_key => wp_create_nonce( Plugin::NONCE_ACTION ),
 			]
 		);
 	}

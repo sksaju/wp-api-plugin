@@ -19,9 +19,9 @@ const appendApiData = () => {
 
 	const data = new FormData();
 	data.append( 'action', 'wpapi_plugin_get_data' );
-	const  { ajax_url } = wpapiplugin;
+	const  { ajaxUrl } = wpapiplugin;
 
-	fetch( ajax_url, {
+	fetch( ajaxUrl, {
 			method: 'POST',
 			body: data
 		})

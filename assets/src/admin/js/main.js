@@ -15,12 +15,12 @@ const refreshApiData = () => {
 	nodeRefreshButton.innerHTML = __( 'Reloading..', 'wp-api-plugin' );
 	nodeRefreshButton.setAttribute( 'disabled', true );
 
-	const  { ajax_url, nonce_key } = wpapiplugin;
+	const  { ajaxUrl, nonceKey } = wpapiplugin;
 	const data = new FormData();
 	data.append( 'action', 'wpapi_plugin_refresh_data' );
-	data.append( nonce_key, wpapiplugin[ nonce_key ] );
+	data.append( nonceKey, wpapiplugin[ nonceKey ]);
 
-	fetch( ajax_url, {
+	fetch( ajaxUrl, {
 			method: 'POST',
 			body: data
 		})

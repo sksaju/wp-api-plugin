@@ -13,7 +13,7 @@ namespace WPAPIPlugin\Front;
 
 use WPAPIPlugin\Plugin;
 
- /**
+/**
  * Class Front
  *
  * @package WPAPIPlugin\Front
@@ -55,7 +55,8 @@ class Front {
 			'wp-api-plugin-shortcode-script',
 			WPAPI_PLUGIN_URL . 'assets/dist/front/main.min.js',
 			[ 'wp-i18n' ],
-			Plugin::VERSION
+			Plugin::VERSION,
+			true
 		);
 
 		// Localize the script with data.
@@ -63,7 +64,7 @@ class Front {
 			'wp-api-plugin-shortcode-script',
 			'wpapiplugin',
 			[
-				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 			]
 		);
 	}
@@ -78,7 +79,7 @@ class Front {
 		include_once WPAPI_PLUGIN_PATH . 'templates/front/data-table-shortcode.php';
 		echo ob_get_clean();
 
-		// Enqueue style and script
+		// Enqueue style and script.
 		wp_enqueue_style( 'wp-api-plugin-shortcode-styles' );
 		wp_enqueue_script( 'wp-api-plugin-shortcode-script' );
 	}

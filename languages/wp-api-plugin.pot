@@ -9,13 +9,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-01-23T22:44:57+01:00\n"
+"POT-Creation-Date: 2021-01-24T11:41:48+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wp-api-plugin\n"
 
 #. Plugin Name of the plugin
-#: src/Admin/Admin.php:75
+#: includes/Admin/Admin.php:75
 msgid "WP API Plugin"
 msgstr ""
 
@@ -35,40 +35,40 @@ msgstr ""
 msgid "https://github.com/sksaju/"
 msgstr ""
 
-#: src/Admin/Admin.php:74
+#: includes/Admin/Admin.php:74
 msgid "API Data"
 msgstr ""
 
-#: src/Admin/API_Data_List.php:70
+#: includes/Admin/API_Data_List.php:70
 msgid "ID"
 msgstr ""
 
-#: src/Admin/API_Data_List.php:71
+#: includes/Admin/API_Data_List.php:71
 msgid "First Name"
 msgstr ""
 
-#: src/Admin/API_Data_List.php:72
+#: includes/Admin/API_Data_List.php:72
 msgid "Last Name"
 msgstr ""
 
-#: src/Admin/API_Data_List.php:73
+#: includes/Admin/API_Data_List.php:73
 msgid "Email"
 msgstr ""
 
-#: src/Admin/API_Data_List.php:74
+#: includes/Admin/API_Data_List.php:74
 msgid "Date"
 msgstr ""
 
-#: src/Helpers.php:93
+#: includes/Helpers.php:93
 msgid "Nonce not matched"
 msgstr ""
 
-#: src/WP_CLI/CLI_Command.php:48
+#: includes/WP_CLI/CLI_Command.php:48
 msgid "API data refreshed!"
 msgstr ""
 
 #. translators: %s refers to the exception error message
-#: src/WP_CLI/CLI_Command.php:54
+#: includes/WP_CLI/CLI_Command.php:54
 msgid "There was an error running the api refresh command: %s"
 msgstr ""
 
