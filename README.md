@@ -23,6 +23,12 @@ Make sure all dependencies have been installed before moving on:
 → npm
 ```
 
+## WP CLI Command
+
+```
+wp refresh-api-data   # → To refresh API data
+```
+
 ## PHP Coding Standard
 To Test PHP Coding Standard (PHPCS) using a CLI:
 
