@@ -23,13 +23,22 @@ use Exception;
 class Helpers {
 
 	/**
+	 * Remote API URL
+	 *
+	 * @var   string
+	 *
+	 * @since 1.0.0
+	 */
+	const API_URL = 'https://miusage.com/v1/challenge/1/';
+
+	/**
 	 * Validity time in seconds for remote api data
 	 *
 	 * @var   number
 	 *
 	 * @since 1.0.0
 	 */
-	const API_VALIDITY_TIME = 3600;
+	const DATA_VALIDITY_TIME = 3600;
 
 	/**
 	 * Data transient key
@@ -65,11 +74,11 @@ class Helpers {
 	 * @since 1.0.0
 	 */
 	public static function set_api_data(): array {
-		$response = wp_remote_get( 'https://miusage.com/v1/challenge/1/' );
+		$response = wp_remote_get( self::API_URL );
 
 		try {
 			$data = json_decode( $response['body'], true );
-			set_transient( self::DATA_TRANSIENT_KEY, $data, self::API_VALIDITY_TIME );
+			set_transient( self::DATA_TRANSIENT_KEY, $data, self::DATA_VALIDITY_TIME );
 		} catch ( Exception $e ) {
 			echo $e->getMessage();
 			exit;
