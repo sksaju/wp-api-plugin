@@ -32,7 +32,7 @@ if ( version_compare( phpversion(), '7.1', '<' ) ) {
 			<div class="notice notice-error">
 				<p>
 					<?php
-						sprintf(
+						echo sprintf(
 							/* translators: %1$s refers to the <strong> tag and %2$s refers to the </strong> tag */
 							esc_html__( 'The %1$sWP API Plugin%2$s requires at least %1$sPHP 7.1 %2$s to run properly. Please update the PHP on your server and try again.', 'wp-api-plugin' ),
 							'<strong>',
